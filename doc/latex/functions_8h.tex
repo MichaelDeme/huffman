@@ -1,0 +1,78 @@
+\hypertarget{functions_8h}{}\doxysection{functions.\+h File Reference}
+\label{functions_8h}\index{functions.h@{functions.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{functions_8h_abdb6fdffd522149eb8bbdbb9d89b0dc3}{get\+Node}} (char ch, int freq, \mbox{\hyperlink{struct_node}{Node}} $\ast$left, \mbox{\hyperlink{struct_node}{Node}} $\ast$right)
+\item 
+void \mbox{\hyperlink{functions_8h_a7f9f4fd71711f672999ed64c179de162}{encode}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$root, std\+::string str, std\+::unordered\+\_\+map$<$ char, std\+::string $>$ \&huffman\+Code)
+\item 
+void \mbox{\hyperlink{functions_8h_a193f35bb86ad14eff2b1c8f59090198d}{decode}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$root, int \&index, std\+::string str)
+\item 
+void \mbox{\hyperlink{functions_8h_a1550c7f484db69b4d26348158a995b64}{build\+Huffman\+Tree}} (std\+::string text)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{functions_8h_a1550c7f484db69b4d26348158a995b64}\label{functions_8h_a1550c7f484db69b4d26348158a995b64}} 
+\index{functions.h@{functions.h}!buildHuffmanTree@{buildHuffmanTree}}
+\index{buildHuffmanTree@{buildHuffmanTree}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{buildHuffmanTree()}{buildHuffmanTree()}}
+{\footnotesize\ttfamily void build\+Huffman\+Tree (\begin{DoxyParamCaption}\item[{std\+::string}]{text }\end{DoxyParamCaption})}
+
+The function which Builds Huffman Tree and decode given input text 
+\begin{DoxyParams}{Parameters}
+{\em text} & is the string(collection of many characters) which are retrieved from input text file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8h_a193f35bb86ad14eff2b1c8f59090198d}\label{functions_8h_a193f35bb86ad14eff2b1c8f59090198d}} 
+\index{functions.h@{functions.h}!decode@{decode}}
+\index{decode@{decode}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily void decode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{root,  }\item[{int \&}]{index,  }\item[{std\+::string}]{str }\end{DoxyParamCaption})}
+
+Function to traverse the Huffman Tree and decode the encoded string 
+\begin{DoxyParams}{Parameters}
+{\em index} & used to check if it is not leaf then we increment index and traverse next level \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8h_a7f9f4fd71711f672999ed64c179de162}\label{functions_8h_a7f9f4fd71711f672999ed64c179de162}} 
+\index{functions.h@{functions.h}!encode@{encode}}
+\index{encode@{encode}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily void encode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{root,  }\item[{std\+::string}]{str,  }\item[{std\+::unordered\+\_\+map$<$ char, std\+::string $>$ \&}]{huffman\+Code }\end{DoxyParamCaption})}
+
+Function to traverse the Huffman Tree and store Huffman Codes in map. 
+\begin{DoxyParams}{Parameters}
+{\em root} & node pointer \\
+\hline
+{\em std\+::string} & str new var to track the encoded data/numbers \\
+\hline
+{\em std\+::unordered\+\_\+map$<$char,std\+::string$>$} & \&huffman\+Code map for storing char and their freq \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8h_abdb6fdffd522149eb8bbdbb9d89b0dc3}\label{functions_8h_abdb6fdffd522149eb8bbdbb9d89b0dc3}} 
+\index{functions.h@{functions.h}!getNode@{getNode}}
+\index{getNode@{getNode}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{getNode()}{getNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}} $\ast$ get\+Node (\begin{DoxyParamCaption}\item[{char}]{ch,  }\item[{int}]{freq,  }\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+Function to allocate a new tree node. 
+\begin{DoxyParams}{Parameters}
+{\em ch} & indicates the characters \\
+\hline
+{\em freq} & with their occuruence or frequency \\
+\hline
+{\em left} & and \\
+\hline
+{\em right} & indicate left and right child of that node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \mbox{\hyperlink{struct_node}{Node}} with ch and freq 
+\end{DoxyReturn}

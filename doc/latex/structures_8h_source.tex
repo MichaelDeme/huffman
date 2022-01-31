@@ -1,0 +1,28 @@
+\hypertarget{structures_8h_source}{}\doxysection{structures.\+h}
+\mbox{\hyperlink{structures_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef STRUCTURES\_H}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define STRUCTURES\_H}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{// A Tree node}}
+\DoxyCodeLine{7 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_node}{Node}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{keywordtype}{char} \mbox{\hyperlink{struct_node_a60b3924d995a47df096d90f9a926d7ba}{ch}};}
+\DoxyCodeLine{10     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_node_a93e1b0f2d619b5ce1b19d982e967e579}{freq}};}
+\DoxyCodeLine{11     \mbox{\hyperlink{struct_node}{Node}} *\mbox{\hyperlink{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee}{left}}, *\mbox{\hyperlink{struct_node_afe5916d969cd32f7de1e4ba15580c989}{right}};}
+\DoxyCodeLine{12 \};}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{comment}{// Comparison object to be used to order the heap}}
+\DoxyCodeLine{15 \textcolor{keyword}{struct }\mbox{\hyperlink{structcomp}{comp}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structcomp_a4d694fdd4e34d2efdd74d9177136ff10}{operator()}}(\mbox{\hyperlink{struct_node}{Node}}* l, \mbox{\hyperlink{struct_node}{Node}}* r)}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19         \textcolor{comment}{// highest priority item has lowest frequency}}
+\DoxyCodeLine{20         \textcolor{keywordflow}{return} l-\/>\mbox{\hyperlink{struct_node_a93e1b0f2d619b5ce1b19d982e967e579}{freq}} > r-\/>\mbox{\hyperlink{struct_node_a93e1b0f2d619b5ce1b19d982e967e579}{freq}};}
+\DoxyCodeLine{21     \}}
+\DoxyCodeLine{22 \};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
